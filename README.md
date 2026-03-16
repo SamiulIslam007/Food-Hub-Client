@@ -1,37 +1,38 @@
 <div align="center">
 
-# 🍔 Food Hub Client
+# Food Hub Client
 
-**A Modern Full-Stack Food Delivery Platform Frontend**
+**Modern food delivery frontend built with Next.js 16**
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
 </div>
 
-## 📖 Overview
+## Overview
 
-Food Hub is a robust multi-vendor food delivery platform connecting food lovers with top local restaurants. This repository contains the frontend application built with the latest web technologies, featuring distinct dashboards for Customers, Providers (Restaurants), and Administrators.
+Food Hub is a multi-vendor food delivery platform that connects customers with local restaurants.
+This repository contains the frontend app, including separate experiences for customers, providers, and admins.
 
-## ✨ Key Features
+## Key Features
 
-### 👤 Role-Based Portals
-- **Admin Dashboard**: Comprehensive overview, user management, provider approvals, and platform statistics.
-- **Provider Dashboard**: Menu management, order tracking, real-time status updates, and business profile management.
-- **Customer Portal**: Browse meals, advanced filtering & search, cart management, checkout, and order history.
+### Role-Based Portals
+- **Admin Dashboard**: Overview, user management, provider approvals, and platform stats
+- **Provider Dashboard**: Meal management, order handling, status updates, and profile management
+- **Customer Portal**: Browse meals, filters/search, cart, checkout, and order history
 
-### 🚀 Technical Highlights
-- **Modern Stack**: Next.js App Router for optimal routing and SEO.
-- **Type Safety**: End-to-end type safety with TypeScript.
-- **Form Validation**: Robust client-side validation using React Hook Form and Zod.
-- **UI/UX**: Responsive, modern design using Tailwind CSS v4 and Lucide icons.
-- **Toast Notifications**: Elegant user feedback powered by Sonner.
+### Technical Highlights
+- **Next.js App Router** for routing and page structure
+- **Type-safe codebase** with TypeScript
+- **Form handling and validation** via React Hook Form + Zod
+- **Responsive UI** using Tailwind CSS v4
+- **User feedback** with Sonner toasts
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Framework**: Next.js 15 (React 19)
+- **Framework**: Next.js 16 (React 19)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4
 - **State Management**: React Context API
@@ -39,12 +40,12 @@ Food Hub is a robust multi-vendor food delivery platform connecting food lovers 
 - **Forms**: React Hook Form + Zod
 - **Icons**: Lucide React
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- npm or yarn
-- Backend server running (Food Hub Server)
+- npm
+- Food Hub backend server running
 
 ### Installation
 
@@ -57,12 +58,9 @@ cd Food-Hub-Client
 2. Install dependencies:
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Set up environment variables:
-Create a `.env` file in the root directory:
+3. Create an environment file in the root directory (`.env`):
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
 ```
@@ -70,17 +68,24 @@ NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
 4. Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📂 Project Structure
+### Available Scripts
+
+```bash
+npm run dev    # start development server
+npm run build  # build for production
+npm run start  # run production build
+npm run lint   # run lint checks
+```
+
+## Project Structure
 
 ```text
 src/
-├── app/                  # Next.js App Router pages & layouts
+├── app/                  # Next.js App Router pages and layouts
 │   ├── (auth)/           # Authentication routes (login, register)
 │   ├── (dashboard)/      # Role-based dashboards (admin, customer, provider)
 │   ├── meals/            # Public meal browsing
@@ -92,19 +97,19 @@ src/
 ├── context/              # React Context (AuthContext)
 ├── lib/                  # Utility functions (axios instance)
 ├── services/             # API integration services
-└── types/                # TypeScript interfaces & types
+└── types/                # TypeScript interfaces and types
 ```
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome.
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit --trailer "Made-with: Cursor" -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit --trailer "Made-with: Cursor" -m "Add some AmazingFeature"`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+No license file is currently included in this repository.
