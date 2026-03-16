@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { Suspense, useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import {
@@ -17,6 +17,8 @@ import { mealService } from "@/services/meal.service";
 import { categoryService } from "@/services/category.service";
 import { IMeal, ICategory } from "@/types";
 
+export const dynamic = "force-dynamic";
+
 const SPICE_LEVELS = ["Mild", "Medium", "Hot", "Extra Hot"];
 const SORT_OPTIONS = [
   { value: "createdAt:desc", label: "Newest" },
@@ -25,7 +27,7 @@ const SORT_OPTIONS = [
   { value: "title:asc", label: "Name A–Z" },
 ];
 
-export default function MealsPage() {
+function MealsPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -310,6 +312,20 @@ export default function MealsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function MealsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center">
+          <span className="text-gray-500">Loading meals...</span>
+        </div>
+      }
+    >
+      <MealsPageContent />
+    </Suspense>
   );
 }
 
