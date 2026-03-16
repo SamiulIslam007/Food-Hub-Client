@@ -31,7 +31,6 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-5 group">
               <div className="w-9 h-9 bg-orange-500 rounded-xl flex items-center justify-center group-hover:bg-orange-600 transition-colors">
@@ -60,7 +59,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
               Quick Links
@@ -79,7 +77,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* For Providers */}
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
               For Providers
@@ -98,7 +95,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories */}
           <div>
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
               Categories
@@ -119,7 +115,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
